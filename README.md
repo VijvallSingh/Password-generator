@@ -39,22 +39,5 @@ letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
 numbers = '0123456789'
 symbols = '!@#$%&*'
 
-def generate_password():
-    print("Welcome to the password generator")
-    n_letters = int(input("Enter the number of letters for your password: "))
-    n_numbers = int(input("Enter the number of digits for your password: "))
-    n_symbols = int(input("Enter the number of special characters for your password: "))
-
-    password_chars = (
-        [random.choice(letters) for _ in range(n_letters)] +
-        [random.choice(numbers) for _ in range(n_numbers)] +
-        [random.choice(symbols) for _ in range(n_symbols)]
-    )
-
-    random.shuffle(password_chars)
-    password = ''.join(password_chars)
-    print(f"Here is your generated password: {password}")
-
-generate_password()
 
 Author - Vijval Singh
